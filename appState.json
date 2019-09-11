@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "testIndu/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: process.env.UserPoolId_cognitocognito1,\n        AttributesToGet: [\"sub\", \"address\", \"birthdate\", \"email\", \"family_name\", \"gender\", \"given_name\", \"locale\", \"middle_name\", \"name\", \"nickname\", \"phone_number\"],\n        Limit: 10\n    }, function (error, data) {\n        if (error) {\n            console.log(error);\n            console.log(\"errorrrrr\");\n            // implement error handling logic here\n            throw error;\n        }\n        console.log(\"passsssss\");\n        // your logic goes within this block\n    });\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n    cognito_idp.listUsers({\n        UserPoolId: process.env.UserPoolId_cognitocognito1,\n        AttributesToGet: [\"sub\", \"address\", \"birthdate\", \"email\", \"family_name\", \"gender\", \"given_name\", \"locale\", \"middle_name\", \"name\", \"nickname\", \"phone_number\"],\n        Limit: 10\n    }, function (error, data) {\n        if (error) {\n            console.log(error);\n            console.log(\"errorrrrr\");\n            // implement error handling logic here\n            throw error;\n        }\n        console.log(\"passsssss\");\n        console.log(data);\n        // your logic goes within this block\n    });\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -39,11 +39,11 @@
           }
         ],
         "testCases": {
-          "747362c2-a261-401a-a403-77172b5bd8d8": {
-            "id": "747362c2-a261-401a-a403-77172b5bd8d8",
+          "de6e1beb-d10a-4624-830c-f8703e6534a8": {
+            "id": "de6e1beb-d10a-4624-830c-f8703e6534a8",
             "name": "Test event",
             "functionId": "9cf1d884-1d05-4b18-95c9-8ed61e00a450",
-            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
             "eventTemplate": "hello-world"
           }
         }
@@ -247,7 +247,7 @@
     "projectRegion": "eu-west-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568196082449
+    "lastSave": 1568196222666
   },
   "VCS_STATE": {
     "provider": "GitHub",

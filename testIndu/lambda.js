@@ -14,6 +14,7 @@ exports.handler = function (event, context, callback) {
             throw error;
         }
         console.log("passsssss");
+        console.log(data);
         // your logic goes within this block
     });
 
