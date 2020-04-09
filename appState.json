@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "TESTINDU.js",
         "cursor": {
-          "lineNumber": 3,
-          "column": 48
+          "lineNumber": 15,
+          "column": 9
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -22,14 +22,67 @@
           "layers": [],
           "name": "TESTINDU"
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "apigusEast1TestIndunilApiqainduget",
+            "config": {}
+          }
+        ]
       }
     },
     "openFiles": [
       "287e9532-1ed8-4589-9464-2b40e6521f3e"
     ],
     "currentFileId": "287e9532-1ed8-4589-9464-2b40e6521f3e",
-    "resources": {},
+    "resources": {
+      "apigusEast1TestIndunilApiqainduget": {
+        "name": "apigusEast1TestIndunilApiqainduget",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "Test Indunil Api",
+          "apiId": "098ff0lfdg",
+          "endpointType": "EDGE",
+          "rootResourceId": "ntzpitphk5",
+          "existingResources": {
+            "/qa": "boe2vf",
+            "/": "ntzpitphk5",
+            "/qa/indu": "wirmir"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/qa/indu",
+          "resourceName": "qa/indu",
+          "resourceId": "wirmir",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "test",
+          "stageDeploymentId": "1psb7t",
+          "mode": 1
+        }
+      },
+      "s3as2TestLahiru": {
+        "name": "s3as2TestLahiru",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "as2-test-lahiru"
+          }
+        }
+      },
+      "ses-indunil@adroitlogic.com": {
+        "name": "ses-indunil@adroitlogic.com",
+        "type": "SES",
+        "config": {
+          "selectedIdentity": "indunil@adroitlogic.com",
+          "projectRegion": "us-east-1"
+        }
+      }
+    },
     "customTemplate": {
       "overrideDefault": false,
       "dialect": null,
@@ -46,7 +99,15 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "nodejs",
+          "version": "2.644.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -57,7 +118,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1586410747165
+    "lastSave": 1586412572386
   },
   "VCS_STATE": {
     "provider": "GitHub",
